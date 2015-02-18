@@ -1,0 +1,30 @@
+Temporal vc1parser for gstreamer-vaapi
+######################################
+
+This vc1parser includes a WIP patch[1], which enables the testing of
+vc1 bitstream media.
+
+How to compile it?
+==================
+
+Given a complete GStreamer setup, just type the command
+
+$ make prefix=/path/to/your/build install
+
+
+How to test it?
+===============
+
+$ gst-launch-1.0 filesrc location=bitstream.vc1 ! vaapiparse_vc1 ! vaapidecode ! vaapisink
+
+
+Troubleshooting
+===============
+
+If you have troubles using playbin or decodebin with wmv formats, you
+can safetly remove the library:
+
+$ rm /path/to/your/build/lib/gstreamer-1.0/libgstvaapivc1parser.so
+
+
+1. https://bugzilla.gnome.org/show_bug.cgi?id=743948
