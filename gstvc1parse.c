@@ -85,6 +85,10 @@
 #include <gst/pbutils/pbutils.h>
 #include <string.h>
 
+#if !GST_CHECK_VERSION(1,3,1)
+#define GST_PAD_SET_ACCEPT_INTERSECT(x)
+#endif
+
 GST_DEBUG_CATEGORY (vc1_parse_debug);
 #define GST_CAT_DEFAULT vc1_parse_debug
 
