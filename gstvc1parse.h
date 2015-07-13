@@ -23,6 +23,8 @@
 
 #include <gst/gst.h>
 #include <gst/base/gstbaseparse.h>
+
+#define GST_USE_UNSTABLE_API 1
 #include <gst/codecparsers/gstvc1parser.h>
 
 G_BEGIN_DECLS
