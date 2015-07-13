@@ -138,7 +138,7 @@ stream_format_to_string (VC1StreamFormat stream_format)
 static VC1StreamFormat
 stream_format_from_string (const gchar * stream_format)
 {
-  gint i;
+  guint i;
 
   for (i = 0; i < G_N_ELEMENTS (stream_formats); i++) {
     if (strcmp (stream_formats[i].str, stream_format) == 0)
@@ -156,7 +156,7 @@ header_format_to_string (VC1HeaderFormat header_format)
 static VC1HeaderFormat
 header_format_from_string (const gchar * header_format)
 {
-  gint i;
+  guint i;
 
   for (i = 0; i < G_N_ELEMENTS (header_formats); i++) {
     if (strcmp (header_formats[i].str, header_format) == 0)
