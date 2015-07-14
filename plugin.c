@@ -29,7 +29,7 @@ static gboolean
 plugin_init (GstPlugin * plugin)
 {
   return gst_element_register (plugin, "vaapiparse_vc1",
-      GST_RANK_NONE, GST_TYPE_VC1_PARSE);
+      GST_RANK_PRIMARY, GST_TYPE_VC1_PARSE);
 }
 
 GstPluginDesc gst_plugin_desc = {
